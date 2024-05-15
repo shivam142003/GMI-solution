@@ -1,3 +1,4 @@
+pip3.12 install --disable-pip-version-check --target . --upgrade pywin32
 asgiref==3.8.1
 asttokens==2.4.1
 comm==0.2.0
