@@ -10,4 +10,13 @@
             "dest": "GMI/wsgi.py"
         }
     ]
+  "functions": {
+    "api/**/*.py"
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/vercel/output/\\1"
+    }
+  ]
 }
