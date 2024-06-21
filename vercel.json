@@ -1,17 +1,22 @@
 {
-    "builds": [{
-        "src": "GMI/wsgi.py",
-        "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.11" }
-    }],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "GMI/wsgi.py"
-        }
-    ]
+  "builds": [{
+    "src": "GMI/wsgi.py",
+    "use": "@vercel/python",
+    "config": {
+      "maxLambdaSize": "15mb",
+      "runtime": "python3.11"
+    }
+  }],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "GMI/wsgi.py"
+    }
+  ],
   "functions": {
-    "api/**/*.py"
+    "api": {
+      "include": "api/**/*.py"
+    }
   },
   "rewrites": [
     {
